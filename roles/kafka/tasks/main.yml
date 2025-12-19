@@ -1,9 +1,8 @@
 ---
-- name: Ensure podman, podman plugins, and java are installed
+- name: Ensure podman and java are installed
   ansible.builtin.dnf:
     name:
       - podman
-      - podman-plugins
       - java
     state: present
 
