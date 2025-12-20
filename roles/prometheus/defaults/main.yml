@@ -9,9 +9,10 @@ prometheus_group: prometheus
 prometheus_user: prometheus
 
 # Prometheus install path
-prometheus_path_install: /usr/local/bin/prometheus
+prometheus_path_install: /usr/local/bin/prometheustools
 # Prometheus configuration path
 prometheus_path_config: /etc/prometheus
+prometheus_config_dir: /etc/prometheus
 alertmanager_path_config: /etc/alertmanager
 # Prometheus logs path
 prometheus_path_log: /var/log/prometheus
@@ -74,7 +75,7 @@ alertmanager_version: "0.8.0"
 alertmanager_service_name: alertmanager
 
 # Alert manager template path
-alertmanager_path_templates: "{{ prometheus_path_config }}/templates"
+alertmanager_path_templates: "/etc/alertmanager/templates"
 # Alert manager data path
 alertmanager_path_data: /var/lib/alertmanager
 
