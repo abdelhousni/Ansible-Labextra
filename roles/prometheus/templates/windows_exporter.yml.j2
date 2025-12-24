@@ -1,9 +1,9 @@
 ---
 collectors:
-  enabled: cpu,cpu_info,cs,iis,logical_disk,memory,net,os,service,system,textfile
+  enabled: cpu,cpu_info,iis,logical_disk,memory,net,os,service,system,textfile
 collector:
   service:
-    services-where: Name='windows_exporter'
+    include: "windows_exporter"
   scheduled_task:
     include: /Microsoft/.+
 log:
@@ -12,6 +12,5 @@ scrape:
   timeout-margin: 0.5
 telemetry:
   path: /metrics
-  max-requests: 5
 web:
   listen-address: ":9100"
